@@ -29,10 +29,10 @@ GAPPS_PRODUCT_PACKAGES += \
 endif
 endif
 
-ifneq ($(filter 25,$(call get-allowed-api-levels)),)
-GAPPS_PRODUCT_PACKAGES += \
-    Turbo
-endif
+## ifneq ($(filter 25,$(call get-allowed-api-levels)),)
+## GAPPS_PRODUCT_PACKAGES += \
+##    Turbo
+## endif
 
 ifneq ($(filter 26,$(call get-allowed-api-levels)),)
 GAPPS_PRODUCT_PACKAGES += \
