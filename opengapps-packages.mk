@@ -13,11 +13,11 @@ GAPPS_PRODUCT_PACKAGES += \
     GoogleOneTimeInitializer \
     PrebuiltGmsCore
 
-ifneq ($(filter 23,$(call get-allowed-api-levels)),)
-GAPPS_PRODUCT_PACKAGES += \
-    GoogleTTS \
-    GooglePackageInstaller
-endif
+## ifneq ($(filter 23,$(call get-allowed-api-levels)),)
+## GAPPS_PRODUCT_PACKAGES += \
+##    GoogleTTS \
+##    GooglePackageInstaller
+## endif
 
 ## in oreo (api level 26), installing PrebuiltGmsCoreInstantApps
 ## causes Play Store app-installs to get stuck on "Download
