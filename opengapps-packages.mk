@@ -8,15 +8,10 @@ DEVICE_PACKAGE_OVERLAYS += \
 GAPPS_PRODUCT_PACKAGES += \
     GoogleBackupTransport \
     GoogleContactsSyncAdapter \
-    GoogleFeedback \
-    GoogleOneTimeInitializer \
-    GooglePartnerSetup \
-    PrebuiltGmsCore \
     GoogleServicesFramework \
-    GoogleLoginService \
     SetupWizard \
-    Phonesky \
-    GoogleCalendarSyncAdapter
+    GoogleOneTimeInitializer \
+    PrebuiltGmsCore
 
 ifneq ($(filter 23,$(call get-allowed-api-levels)),)
 GAPPS_PRODUCT_PACKAGES += \
