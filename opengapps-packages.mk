@@ -5,19 +5,9 @@ include vendor/opengapps/build/opengapps-files.mk
 DEVICE_PACKAGE_OVERLAYS += \
     $(GAPPS_DEVICE_FILES_PATH)/overlay/pico
 
-GAPPS_PRODUCT_PACKAGES += \
-    GoogleBackupTransport \
-    GoogleContactsSyncAdapter \
-    GoogleServicesFramework \
-    SetupWizard \
-    GoogleOneTimeInitializer \
-    PrebuiltGmsCore
-
-## ifneq ($(filter 23,$(call get-allowed-api-levels)),)
-## GAPPS_PRODUCT_PACKAGES += \
-##    GoogleTTS \
-##    GooglePackageInstaller
-## endif
+ifneq ($(filter 23,$(call get-allowed-api-levels)),)
+GAPPS_PRODUCT_PACKAGES += GooglePackageInstaller
+endif
 
 ## in oreo (api level 26), installing PrebuiltGmsCoreInstantApps
 ## causes Play Store app-installs to get stuck on "Download
@@ -29,10 +19,10 @@ GAPPS_PRODUCT_PACKAGES += \
 endif
 endif
 
-## ifneq ($(filter 25,$(call get-allowed-api-levels)),)
-## GAPPS_PRODUCT_PACKAGES += \
-##    Turbo
-## endif
+#ifneq ($(filter 25,$(call get-allowed-api-levels)),)
+#GAPPS_PRODUCT_PACKAGES += \
+#    Turbo
+#endif
 
 ifneq ($(filter 26,$(call get-allowed-api-levels)),)
 GAPPS_PRODUCT_PACKAGES += \
