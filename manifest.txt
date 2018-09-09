@@ -1,0 +1,5 @@
+  <project path="vendor/opengapps/build" name="breizhpowa/aosp_build" revision="master" remote="github" />
+  <project path="vendor/opengapps/sources/all" name="breizhpowa/all" clone-depth="2" revision="master" remote="github" />
+  <project path="vendor/opengapps/sources/arm" name="opengapps/arm" clone-depth="2" revision="master" remote="github" />
+  <project path="vendor/opengapps/sources/arm64" name="opengapps/arm64" clone-depth="2" revision="master" remote="github" />
+</manifest>
